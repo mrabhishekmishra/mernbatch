@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add class list </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+        body{
+            text-align: center;
+        }
+        .main{
+            width: 500px;
+            background-color: yellow;
+            font-size: 18px;
+            color: red;
+            padding: 10px;
+            margin: auto;
+            border: 1px solid red;
+        }
+        .extra{
+            height: 500px;
+            border-radius: 50%;
+            text-align: center;
+            justify-content: center;
+            align-content: center;
+            background-color: red;
+            color: white;
+            transition: 5s;
+        }
+        button{
+            padding: 5px 10px;
+            text-transform: capitalize;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+     <div class="main ">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, reprehenderit ratione, voluptas accusamus suscipit facere itaque, hic dolore dolorum adipisci dignissimos quaerat provident dolorem porro dolores sit quibusdam libero eaque!
+     </div>
+     <button class="add">Add class </button>
+     <button class="remove">remove class </button>
+     <button class="toggel">toggel class </button>
+</body>
+<script>
+    let main = document.querySelector('.main');
+    let add = document.querySelector('.add');
+    let remove = document.querySelector('.remove');
+    let toggel = document.querySelector('.toggel');
+
+    add.addEventListener('click',()=>{
+
+        main.classList.add('extra');
+
+    })
+    remove.addEventListener('click',()=>{
+
+
+        main.classList.remove('extra');
+        
+    })
+    toggel.addEventListener('click',()=>{
+
+        main.classList.toggle('extra');
+        
+    })
+
+</script>
+</html>

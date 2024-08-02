@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 500px;
+            margin: 100px auto;
+            border: 1px solid black;
+            padding: 20px;
+            background-color: cadetblue;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 2px black;
+        }
+        li {
+            margin-top: 10px;
+        }
+        button{
+            padding: 5px 10px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul class="main">
+        <li><label for="#">Number 1</label>  <input type="number" class="Number1"></li>
+        <li> <label for="#">operation</label>
+            <select name="" id="" class="select">
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="*">*</option>
+              <option value="/">/</option>
+            </select></li>
+        <li> <label for="#">Number 2</label>  <input type="number" class="Number2"></li>
+        <li><button class="btn">result</button> <input type="number" class="result"></li>
+    </ul>
+   
+</body>
+<script>
+    let Number1 = document.querySelector('.Number1');
+    let Number2 = document.querySelector('.Number2');
+    let result = document.querySelector('.result');
+    let btn = document.querySelector('.btn');
+    let value = document.querySelector('.select');
+    btn.addEventListener('click', ()=>{
+        let num1 =Number(Number1.value) ;
+        let num2 = Number(Number2.value);
+        let opr = value.value;
+        if(opr == '+'){
+           let total = num1+num2; 
+           result.value=total;
+        }else if(opr =='-'){
+            let total = num1-num2; 
+            result.value=total;
+        }else if(opr =='*'){
+            let total = num1*num2; 
+            result.value=total;
+        }else{
+            let total = num1/num2; 
+            result.value=total;
+        }
+       
+    })
+    
+    
+</script>
+</html>

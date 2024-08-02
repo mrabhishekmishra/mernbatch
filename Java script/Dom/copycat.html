@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Cat</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+       body{
+        text-align: center;
+       }
+       input{
+        margin-top: 10px;
+       }
+       .box{
+        width: 500px;
+        height: 200px;
+        padding: 10px;
+        border: 1px solid ;
+        margin: 50px auto;
+        justify-content: center;
+        align-content: center;
+        font-size: 18px;
+       }
+    </style>
+</head>
+<body>
+  <input type="text">
+  <div class="box">
+
+  </div>
+    </body>
+    <script>
+        let input = document.querySelector('input');
+        let box = document.querySelector('.box');
+        input.addEventListener('input', ()=>{
+               box.innerText = input.value;
+        })
+    </script>
+</html>
